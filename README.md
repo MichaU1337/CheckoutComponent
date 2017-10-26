@@ -1,5 +1,5 @@
 # Checkout Component 
-Project created according to Project.jpg file
+Project created according to Project.png file.
 
 At the beggining of this project I started creating it with JPA, but in the file there was nothing about using any persistance technology.
 
