@@ -23,4 +23,3 @@ Remove an item from the cart:
 
 The main goal of this project was to calculate the price for all of the items in the cart:
 /cart/total
-
