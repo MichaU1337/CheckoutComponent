@@ -18,7 +18,6 @@ public class ItemRepository {
         listOfItems.add(new Item("E", 20, 2, 0));
 
     }
-
     public List<Item> getListOfItems() {
         return listOfItems;
     }

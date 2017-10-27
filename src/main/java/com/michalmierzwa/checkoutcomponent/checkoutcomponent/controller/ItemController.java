@@ -2,6 +2,8 @@ package com.michalmierzwa.checkoutcomponent.checkoutcomponent.controller;
 
 import com.michalmierzwa.checkoutcomponent.checkoutcomponent.domain.Item;
 import com.michalmierzwa.checkoutcomponent.checkoutcomponent.repository.ItemRepository;
+import com.michalmierzwa.checkoutcomponent.checkoutcomponent.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +14,12 @@ import java.util.List;
 @RequestMapping(value = "/item")
 public class ItemController {
 
-    private ItemRepository items = new ItemRepository();
+    private ItemService items;
+
+    @Autowired
+    public void setItemService(ItemService itemService){
+        this.items = itemService;
+    }
 
     @RequestMapping(value = "/show", method = RequestMethod.GET)
     public List<Item> getAll() {
